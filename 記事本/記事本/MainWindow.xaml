@@ -1,0 +1,87 @@
+﻿<Window x:Class="記事本.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:記事本"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="640" WindowStyle="None" Topmost="False">
+   
+    <Grid>
+        <!--分格-->
+       
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--在COLUM裡發生-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <!--背景顏色-->
+            <Border Grid.Row="0" Grid.Column="1" Background="Black"></Border>
+
+            <!--標題-->
+            <StackPanel Grid.Row="0" x:Name="TitleBar" Orientation="Horizontal" MouseMove="TitleBar_MouseMove">
+                <TextBlock x:Name="fileTitle" Text="NewFile" VerticalAlignment="Center" FontSize="18" Padding="20,0,0,0" Foreground="White" Margin="0,14" Width="292"/>
+            </StackPanel>
+
+            <!--視窗按鈕-->
+        <StackPanel Orientation="Horizontal" Grid.Row="0"  Grid.Column=" 1" Background="Black" HorizontalAlignment="Right" >
+                <Button Foreground="White" Background="Black" BorderThickness="0" Width="20" x:Name="MinimunButton" Click="MinimunButton_Click">─</Button>
+                <Button Foreground="White" Background="Black" BorderThickness="0" Width="20" x:Name="MaximumButton" Click="MaximumButton_Click">□</Button>
+                <Button Foreground="White" Background="Black" BorderThickness="0" Width="20" x:Name="StopButton" Click="StopButton_Click">Χ</Button>
+        </StackPanel>
+
+        <!--卷軸-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1">
+            <TextBox AcceptsReturn="True" TextWrapping="Wrap" BorderThickness="0"  Padding="0,0,0,0" x:Name="TextArea" Background="White" Foreground="Black"></TextBox>
+        </ScrollViewer>
+        </Grid>
+
+        <!--背景顏色-->
+        <Grid Grid.Column="0" Background="Black">
+            <!--按鈕間格離邊框間距-->
+            <StackPanel Margin="10">
+
+                <!--按鈕-->
+                <Button Margin="0,50,0,10" x:Name="NewBtn" Click="NewBtn_Click"  Background="Black" Foreground="White" BorderThickness="0">New</Button>
+                <Button Margin="0,0,0,10" x:Name="OpenBtn" Click="OpenBtn_Click" Background="Black" Foreground="White" BorderThickness="0">Open</Button>
+                <Button Margin="0,0,0,10" x:Name="SaveBtn" Click="SaveBtn_Click"  Background="Black" Foreground="White" BorderThickness="0">Save</Button>
+                <Button Margin="0,0,0,10" x:Name="SaveAsBtn" Click="SaveAsBtn_Click"  Background="Black" Foreground="White" BorderThickness="0">Save as</Button>
+
+                <!--字體大小-->
+                <StackPanel Orientation="Horizontal" Height="40" Margin="5,5,5,0">
+                    <Button Margin="10 0 5 0" FontSize="12" Foreground="White" Background="Black" BorderThickness="0" x:Name="frontSize12" Click="frontSize12_Click">A</Button>
+                    <Button Margin="10 0 5 0" FontSize="18" Foreground="White" Background="Black" BorderThickness="0" x:Name="frontSize18" Click="frontSize18_Click">A</Button>
+                    <Button Margin="10 0 5 0" FontSize="24" Foreground="White" Background="Black" BorderThickness="0" x:Name="frontSize24" Click="frontSize24_Click">A</Button>
+                </StackPanel>
+
+                <!--切換面板顏色-->
+                <StackPanel Orientation="Horizontal">
+
+                    <!--變灰色的按鈕-->
+                    <Grid Margin="10 0 5 0" Width="30" Height="30" x:Name="DarkmodeSwitch" MouseLeftButtonDown="DarkmodeSwitch_MouseLeftButtonDown">
+                        <Ellipse Fill="DarkGray"></Ellipse>
+                        <Grid Width="20" Height="20"   >
+                            <Ellipse Fill="Gray" x:Name="DarkmodeSwitchInside"   Height="20"></Ellipse>
+                        </Grid>
+                    </Grid>
+
+                    <!--變白色的按鈕-->
+                    <Grid Margin="5 0 5 0" Width="30" Height="30" x:Name="WhitemodeSwitch"  MouseLeftButtonDown="WhitemodeSwitch_MouseLeftButtonDown">
+                        <Ellipse Fill="DarkGray"></Ellipse>
+                        <Grid Width="20" Height="20">
+                            <Ellipse Fill="White"  x:Name="WhitemodeSwitchInside"  Height="20" ></Ellipse>
+                        </Grid>
+                    </Grid>
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

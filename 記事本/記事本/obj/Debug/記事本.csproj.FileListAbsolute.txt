@@ -1,0 +1,14 @@
+C:\Users\USER\Desktop\記事本\記事本\bin\Debug\記事本.exe.config
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\記事本.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\MainWindow.g.cs
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\App.g.cs
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\記事本_MarkupCompile.cache
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\記事本_MarkupCompile.lref
+C:\Users\USER\Desktop\記事本\記事本\bin\Debug\記事本.exe
+C:\Users\USER\Desktop\記事本\記事本\bin\Debug\記事本.pdb
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\MainWindow.baml
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\記事本.g.resources
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\記事本.Properties.Resources.resources
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\記事本.csproj.GenerateResource.Cache
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\記事本.exe
+C:\Users\USER\Desktop\記事本\記事本\obj\Debug\記事本.pdb
